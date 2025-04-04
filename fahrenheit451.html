@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Fahrenheit 451 - Descripción</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        #descripcion {
+            display: none;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .btns {
+            margin-top: 30px;
+        }
+
+        .menu {
+            margin-top: 30px;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fahrenheit 451</h1>
+        <img src="https://m.media-amazon.com/images/I/61wtqek8ONL._AC_UF894,1000_QL80_.jpg">
+        <br>
+        <button onclick="mostrarDescripcion()">Mostrar descripción</button>
+        <div id="descripcion">
+            <p>
+                <strong>Fahrenheit 451</strong>En Fahrenheit 451, Ray Bradbury imagina un futuro distópico en el que los libros están prohibidos y los bomberos tienen la misión de quemarlos.
+                El protagonista, Guy Montag, es un bombero que comienza a cuestionar su misión y su vida, lo que lo lleva a una rebelión intelectual. 
+                Es una crítica al control de la información y la censura.
+            </p>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="ciencia_ficcion.html">Regresar</a></li>
+                <li><a href="#">Agregar al carrito</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        function mostrarDescripcion() {
+            document.getElementById('descripcion').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

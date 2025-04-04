@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Perdida - Descripción</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 700px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 200px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        #descripcion {
+            display: none;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .menu li {
+            margin: 0 10px;
+        }
+        .menu a {
+            text-decoration: none;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .menu a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Perdida</h1>
+        <img src="https://pics.filmaffinity.com/Perdida-544341973-large.jpg" alt="Portada Perdida">
+        <br>
+        <button onclick="mostrarDescripcion()">Mostrar descripción</button>
+        <div id="descripcion">
+            <p>
+                <strong>Perdida</strong> (*Gone Girl*), escrita por <em>Gillian Flynn</em>, es un thriller psicológico que ha atrapado a millones de lectores con su intensidad y giros inesperados.<br><br>
+                La historia comienza con la desaparición de <strong>Amy Dunne</strong> el día de su quinto aniversario de bodas. Todas las pistas apuntan a su esposo <strong>Nick</strong>, quien comienza a ser el principal sospechoso, aunque él insiste en su inocencia.<br><br>
+                A medida que se revela la verdad, el lector se adentra en una trama retorcida de secretos, manipulación y una relación profundamente tóxica. Flynn construye una narración ingeniosa que juega con la percepción del lector y cuestiona qué tan bien conocemos realmente a quienes amamos.
+            </p>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="misterio.html">Regresar</a></li>
+                <li><a href="#">Agregar al carrito</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        function mostrarDescripcion() {
+            document.getElementById('descripcion').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

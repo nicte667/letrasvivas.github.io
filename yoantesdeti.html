@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Yo antes de ti - Descripción</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 700px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 200px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        #descripcion {
+            display: none;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        nav.menu {
+            margin-top: 30px;
+        }
+        nav.menu ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav.menu li {
+            display: inline;
+        }
+        nav.menu a {
+            text-decoration: none;
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        nav.menu a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Yo antes de ti</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfBYi9plBnF0m6eQSff-dMdy8u8Ok1SbwByw&s" alt="Portada Yo antes de ti">
+        <br>
+        <button onclick="mostrarDescripcion()">Mostrar descripción</button>
+        <div id="descripcion">
+            <p>
+                <strong>Yo antes de ti</strong> es una emotiva novela romántica escrita por Jojo Moyes. La historia sigue a <strong>Louisa Clark</strong>, una joven excéntrica y alegre que acepta trabajar como cuidadora de <strong>Will Traynor</strong>, un joven millonario que quedó tetrapléjico tras un accidente.<br><br>
+                A lo largo de la novela, Lou y Will forjan una relación profunda y transformadora que va más allá de lo profesional, desafiando sus propias creencias, emociones y formas de ver la vida.  
+                La novela mezcla el humor, la tristeza y el amor, explorando temas como la dignidad, la libertad y la importancia de vivir plenamente.
+            </p>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="romance.html">Regresar</a></li>
+                <li><a href="#">Agregar al carrito</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        function mostrarDescripcion() {
+            document.getElementById('descripcion').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+

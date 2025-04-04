@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El silencio de los corderos - Descripción</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 700px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 200px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        #descripcion {
+            display: none;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .menu li {
+            margin: 0 10px;
+        }
+        .menu a {
+            text-decoration: none;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .menu a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>El silencio de los corderos</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRddDnXMYj1FhKyrWIcRpMg4J3Ov_97R8OFVA&s" alt="Portada El silencio de los corderos">
+        <br>
+        <button onclick="mostrarDescripcion()">Mostrar descripción</button>
+        <div id="descripcion">
+            <p>
+                <strong>El silencio de los corderos</strong> (*The Silence of the Lambs*) es un thriller psicológico escrito por <em>Thomas Harris</em>, que introduce al lector en el inquietante mundo del doctor Hannibal Lecter, un brillante psiquiatra y asesino en serie.<br><br>
+                La historia sigue a <strong>Clarice Starling</strong>, una joven y talentosa estudiante del FBI, quien es enviada a entrevistar a Lecter en busca de pistas sobre un peligroso asesino en serie apodado <strong>Buffalo Bill</strong>. Lo que sigue es un juego de ingenio, manipulación y tensión constante, en el que Clarice debe enfrentarse a sus propios miedos mientras intenta salvar a la próxima víctima del asesino.<br><br>
+                Esta novela combina el suspenso, el terror psicológico y el análisis criminal de forma magistral, y ha sido adaptada exitosamente al cine, consolidando a Hannibal Lecter como uno de los villanos más icónicos de la literatura y el cine.
+            </p>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="misterio.html">Regresar</a></li>
+                <li><a href="#">Agregar al carrito</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        function mostrarDescripcion() {
+            document.getElementById('descripcion').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

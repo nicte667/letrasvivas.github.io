@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tal vez mañana - Descripción</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 700px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 200px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        #descripcion {
+            display: none;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        nav.menu {
+            margin-top: 30px;
+        }
+        nav.menu ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav.menu li {
+            display: inline;
+        }
+        nav.menu a {
+            text-decoration: none;
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        nav.menu a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tal vez mañana</h1>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/81SY+aIulLL._AC_UL210_SR210,210_.jpg" alt="Portada Tal vez mañana">
+        <br>
+        <button onclick="mostrarDescripcion()">Mostrar descripción</button>
+        <div id="descripcion">
+            <p>
+                <strong>Tal vez mañana</strong> es una novela escrita por Colleen Hoover. La historia gira en torno a <strong>Sees</strong>, una joven que está pasando por momentos difíciles con su familia y un nuevo amor que entra en su vida.<br><br>
+                Esta novela aborda temas profundos como el abuso, el perdón, la curación y la importancia de encontrar a alguien que te apoye incondicionalmente, mientras explora cómo las emociones pueden conectarnos y transformarnos.
+            </p>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="romance.html">Regresar</a></li>
+                <li><a href="#">Agregar al carrito</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        function mostrarDescripcion() {
+            document.getElementById('descripcion').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

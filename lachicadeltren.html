@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>La chica del tren - Descripción</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 700px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 200px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        #descripcion {
+            display: none;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .menu li {
+            margin: 0 10px;
+        }
+        .menu a {
+            text-decoration: none;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .menu a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>La chica del tren</h1>
+        <img src="https://m.media-amazon.com/images/M/MV5BYzY0NzlmMDQtMjI5Yy00NDUzLTlhNTctNjFkZjgzNThlYzI4XkEyXkFqcGc@._V1_QL75_UY207_CR2,0,140,207_.jpg" alt="Portada La chica del tren">
+        <br>
+        <button onclick="mostrarDescripcion()">Mostrar descripción</button>
+        <div id="descripcion">
+            <p>
+                <strong>La chica del tren</strong>, escrita por <em>Paula Hawkins</em>, es un emocionante thriller psicológico que mantiene al lector en vilo hasta la última página.<br><br>
+                La historia sigue a <strong>Rachel</strong>, una mujer que cada día toma el mismo tren, observando las casas y a una pareja aparentemente perfecta. Sin embargo, un día presencia algo impactante desde la ventana del tren, y pronto se ve involucrada en un complejo misterio que cambia por completo su vida.<br><br>
+                La novela explora la fragilidad de la memoria, las apariencias engañosas y el poder de la obsesión. Es una obra oscura, intrigante y adictiva que ha cautivado a millones de lectores en todo el mundo.
+            </p>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="misterio.html">Regresar</a></li>
+                <li><a href="#">Agregar al carrito</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        function mostrarDescripcion() {
+            document.getElementById('descripcion').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

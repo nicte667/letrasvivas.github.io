@@ -1,0 +1,96 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letras Vivas - Librería Online</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .menu { background-color: #333; overflow: hidden; }
+        .menu ul { list-style-type: none; padding: 0; margin: 0; }
+        .menu li { float: left; position: relative; }
+        .menu a { display: block; color: white; text-decoration: none; padding: 14px 20px; }
+        .menu a:hover { background-color: #575757; }
+        .container { padding: 20px; }
+        .product { border: 1px solid #ddd; padding: 10px; margin: 10px; display: inline-block; width: 200px; text-align: center; }
+        .product img { width: 100%; height: auto; border-radius: 10px; transition: transform 0.3s ease; }
+        .product img:hover { transform: scale(1.1); }
+        .cart { margin-top: 20px; padding: 10px; border: 1px solid #000; }
+        .cart h2 { font-size: 24px; margin-bottom: 10px; }
+        .cart ul { list-style-type: none; padding: 0; }
+        .cart li { margin-bottom: 5px; }
+        .cart p { font-size: 18px; }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="libreria2.html">Inicio</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Bienvenido a Letras Vivas</h1>
+        <div class="product">   
+           <a href="descripcionGrey.html" target="_blank">
+           <img src="https://pics.filmaffinity.com/Cincuenta_sombras_de_Grey-619064266-large.jpg" alt="50 de grey">
+           </a>
+           <p>50 de grey - $10</p>
+          <button onclick="addToCart('50 de grey', 10)">Agregar</button>
+        </div>
+        <div class="product">
+            <a href="yoantesdeti.html" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfBYi9plBnF0m6eQSff-dMdy8u8Ok1SbwByw&s" alt="Yo antes de ti">
+            </a>
+            <p>Yo antes de ti - $15</p>
+            <button onclick="addToCart('Yo antes de ti', 15)">Agregar</button>
+        </div>
+        <div class="product">
+            <a href="atravesdemiventana.html" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWw6F3GANzK3iKB5DIgSq4mtEgskEu_sPNJw&s" alt="A través de mi ventana">
+            </a>
+            <p>A través de mi ventana - $20</p>
+            <button onclick="addToCart('A través de mi ventana', 20)">Agregar</button>
+        </div>
+        <div class="product">
+            <a href="elcuadernodenoah.html" target="_blank">
+            <img src="https://m.media-amazon.com/images/I/71UmHuOSpwL._AC_UF894,1000_QL80_.jpg" alt="El cuaderno de Noah">
+            </a>
+            <p>El cuaderno de Noah - $12</p>
+            <button onclick="addToCart('El cuaderno de Noah', 12)">Agregar</button>
+        </div>
+        <div class="product">
+            <a href="talvezmañana.html" target="_blank">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/81SY+aIulLL._AC_UL210_SR210,210_.jpg" alt="Tal vez mañana">
+            </a>
+            <p>Tal vez mañana - $18</p>
+            <button onclick="addToCart('Tal vez mañana', 18)">Agregar</button>
+        </div>
+    </div>
+    <div class="cart">
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total">0</span></p>
+    </div>
+    <script>
+        let cart = [];
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            updateCart();
+        }
+        function updateCart() {
+            let cartItems = document.getElementById('cart-items');
+            let totalElement = document.getElementById('total');
+            cartItems.innerHTML = '';
+            let total = 0;
+            cart.forEach(item => {
+                let li = document.createElement('li');
+                li.textContent = ${item.name} - $${item.price};
+                cartItems.appendChild(li);
+                total += item.price;
+            });
+            totalElement.textContent = total;
+        }
+    </script>
+</body>
+</html>
