@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable - Letras Vivas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li {
+            position: relative;
+            margin: 0 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            display: block;
+        }
+        .nav-links a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .dropdown {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            background-color: #333;
+            display: none;
+            min-width: 50px;
+        }
+        .dropdown li {
+            width: 100%;
+        }
+        .dropdown a {
+            padding: 5px;
+            display: block;
+        }
+        .nav-links li:hover .dropdown {
+            display: block;
+        }
+        .welcome-section {
+            margin-top: 50px;
+        }
+        .welcome-section img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .welcome-section h1 {
+            font-size: 32px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Letras Vivas</div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li>
+                <a href="#">Categorías ▾</a>
+                <ul class="dropdown">
+                    <li><a href="romance.html">Romance</a></li>
+                    <li><a href="misterio.html">Misterio</a></li>
+                    <li><a href="ciencia_ficcion.html">Ciencia Ficción</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="welcome-section">
+        <h1>¡Bienvenido a Letras Vivas!</h1>
+        <img src="https://i.pinimg.com/564x/9e/1f/49/9e1f4910dcb3c2f73d21f4d1fb48aecf.jpg" alt="Imagen de bienvenida">
+    </div>
+</body>
+</html>
