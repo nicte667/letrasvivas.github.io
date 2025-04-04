@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letras Vivas - Librería Online</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .menu { background-color: #333; overflow: hidden; }
+        .menu ul { list-style-type: none; padding: 0; margin: 0; }
+        .menu li { float: left; position: relative; }
+        .menu a { display: block; color: white; text-decoration: none; padding: 14px 20px; }
+        .menu a:hover { background-color: #575757; }
+        .container { padding: 20px; }
+        .product { border: 1px solid #ddd; padding: 10px; margin: 10px; display: inline-block; width: 200px; text-align: center; }
+        .product img { width: 100%; height: auto; border-radius: 10px; transition: transform 0.3s ease; }
+        .product img:hover { transform: scale(1.1); }
+        .cart { margin-top: 20px; padding: 10px; border: 1px solid #000; }
+        .cart h2 { font-size: 24px; margin-bottom: 10px; }
+        .cart ul { list-style-type: none; padding: 0; }
+        .cart li { margin-bottom: 5px; }
+        .cart p { font-size: 18px; }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="libreria2.html">Inicio</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Bienvenido a Letras Vivas</h1>
+        <div class="product">
+            <a href="dune.html" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-MjTVAH0TdrH8jSnfVeTltZtX8D840GgUiA&s" alt="Dune">
+            </a>
+            <p>Dune - $20</p>
+            <button onclick="addToCart('Dune', 20)">Agregar</button>
+        </div>
+        <div class="product">
+            <a href="neuronamente.html" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA8fBJ8twYDi_GUlLFdHJBxCVdlmTjXxoeSw&s" alt="Neuromante">
+            </a>
+            <p>Neuromante - $15</p>
+            <button onclick="addToCart('Neuromante', 15)">Agregar</button>
+        </div>
+        <div class="product">
+            <a href="elfindelaeternidad.html" target="_blank">
+            <img src="https://m.media-amazon.com/images/I/81Am4ARh4sL._AC_UF894,1000_QL80_.jpg" alt="El fin de la eternidad">
+            </a>
+            <p>El fin de la eternidad - $18</p>
+            <button onclick="addToCart('El fin de la eternidad', 18)">Agregar</button>
+        </div>
+        <div class="product">
+            <a href="fahrenheit451.html" target="_blank">
+            <img src="https://m.media-amazon.com/images/I/61wtqek8ONL._AC_UF894,1000_QL80_.jpg" alt="Fahrenheit 451">
+            </a>
+            <p>Fahrenheit 451 - $12</p>
+            <button onclick="addToCart('Fahrenheit 451', 12)">Agregar</button>
+        </div>
+        <div class="product">
+            <a href="lanaranjamecanica.html" target="_blank">
+            <img src="https://m.media-amazon.com/images/I/71Q6koxSA0L._AC_UF894,1000_QL80_.jpg" alt="La naranja mecánica">
+            </a>
+            <p>La naranja mecánica - $14</p>
+            <button onclick="addToCart('La naranja mecánica', 14)">Agregar</button>
+        </div>
+    </div>
+    <div class="cart">
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total">0</span></p>
+    </div>
+    <script>
+        let cart = [];
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            updateCart();
+        }
+        function updateCart() {
+            let cartItems = document.getElementById('cart-items');
+            let totalElement = document.getElementById('total');
+            cartItems.innerHTML = '';
+            let total = 0;
+            cart.forEach(item => {
+                let li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price}`;
+                cartItems.appendChild(li);
+                total += item.price;
+            });
+            totalElement.textContent = total;
+        }
+    </script>
+</body>
+</html>
